@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from terms.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -91,7 +92,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/terms')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: TermsPage,
 })
 
@@ -102,7 +103,7 @@ function TermsPage() {
 <nav className="subnav" aria-label="King Health pages" data-site-nav><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/" className="sn-label">King Health</Link></li><li><Link to="/about">About Us</Link></li><li><Link to="/faq">FAQ</Link></li><li><Link to="/carriers">Carriers</Link></li><li><Link to="/reviews">Client Reviews</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/family-lawn-walk.jpg" alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 46%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/family-lawn-walk.jpg')} alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 46%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker">Legal</p>
 <h1 id="page-title" tabIndex={-1}>Terms and Conditions</h1>{" "}<p className="band-lede">The terms that govern your use of the King Health website, its services and its SMS messaging program.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band legal" aria-label="Terms and Conditions">{" "}<div className="container legal-wrap">{" "}<nav className="legal-toc reveal" aria-label="On this page">{" "}<p className="kicker">On this page</p>{" "}<ol><li><a href="#sec-sms-program">SMS Program Description</a></li><li><a href="#sec-opt">Opt-In and Opt-Out</a></li><li><a href="#sec-frequency">Message Frequency and Costs</a></li><li><a href="#sec-carrier">Carrier Disclaimer</a></li><li><a href="#sec-eligibility">Eligibility</a></li><li><a href="#sec-support">Customer Support</a></li><li><a href="#sec-privacy">Privacy Policy</a></li><li><a href="#sec-site1">About King Health</a></li><li><a href="#sec-site2">No Coverage Through This Website</a></li><li><a href="#sec-site3">Educational Information Only</a></li><li><a href="#sec-site4">Quotes, Eligibility and Underwriting</a></li><li><a href="#sec-site5">Medicare Information</a></li><li><a href="#sec-site6">Communications and Consent</a></li><li><a href="#sec-site7">Information You Provide</a></li><li><a href="#sec-site8">Reviews and Third Party Content</a></li><li><a href="#sec-site9">Links to Other Sites</a></li><li><a href="#sec-site10">Intellectual Property</a></li><li><a href="#sec-site11">Acceptable Use</a></li><li><a href="#sec-site12">Applications to Join King Health</a></li><li><a href="#sec-site13">Disclaimer of Warranties</a></li><li><a href="#sec-site14">Limitation of Liability</a></li><li><a href="#sec-site15">Indemnification</a></li><li><a href="#sec-site16">Privacy and Accessibility</a></li><li><a href="#sec-modifications">Modifications</a></li><li><a href="#sec-law">Governing Law</a></li><li><a href="#sec-contact">Contact</a></li></ol>{" "}</nav>{" "}<article className="legal-doc reveal">{" "}{/* COUNSEL REVIEW REQUIRED: this document should be reviewed by licensed counsel before publication. */}{" "}<header className="legal-meta">{" "}<p className="legal-entity">King Health LLC</p>{" "}<p className="legal-title">Terms and Conditions</p>{" "}<dl><div><dt>Effective</dt><dd className="terms-eff"><span data-lint-exempt="date">October 25, 2026</span></dd></div>
 <div><dt>Applies to</dt><dd>kinghealthdirect.com and King Health services</dd></div>

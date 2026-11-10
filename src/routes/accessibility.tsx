@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from accessibility.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -91,7 +92,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/accessibility')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: AccessibilityPage,
 })
 
@@ -102,7 +103,7 @@ function AccessibilityPage() {
 <nav className="subnav" aria-label="King Health pages" data-site-nav><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/" className="sn-label">King Health</Link></li><li><Link to="/about">About Us</Link></li><li><Link to="/faq">FAQ</Link></li><li><Link to="/carriers">Carriers</Link></li><li><Link to="/reviews">Client Reviews</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/family-lawn-walk.jpg" alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 46%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/family-lawn-walk.jpg')} alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 46%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker">Accessibility</p>
 <h1 id="page-title" tabIndex={-1}>Accessibility statement</h1>{" "}<p className="band-lede">Insurance Advisory You Can Trust</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band" aria-label="Accessibility statement">{" "}<div className="container prose reveal"><p>King Health designs this site to meet the Web Content Accessibility Guidelines at level AA, including full keyboard navigation, visible focus indicators, sufficient color contrast in every theme and support for reduced motion preferences.</p>
 <p>We review the site regularly as content changes, and we welcome feedback about any barrier you encounter.</p>

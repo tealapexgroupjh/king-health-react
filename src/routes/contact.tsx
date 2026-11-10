@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { ConsultPanel } from '~/components/ConsultPanel'
 import { Faq } from '~/components/Faq'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from contact.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -93,7 +94,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/contact')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: ContactPage,
 })
 
@@ -104,7 +105,7 @@ function ContactPage() {
 <nav className="subnav" aria-label="King Health pages" data-site-nav><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/" className="sn-label">King Health</Link></li><li><Link to="/about">About Us</Link></li><li><Link to="/faq">FAQ</Link></li><li><Link to="/carriers">Carriers</Link></li><li><Link to="/reviews">Client Reviews</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/advisor-lounge-meeting.jpg" alt="" width="1800" height="1202" loading="eager" fetchPriority="high" style={{ "objectPosition": "55% 40%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/advisor-lounge-meeting.jpg')} alt="" width="1800" height="1202" loading="eager" fetchPriority="high" style={{ "objectPosition": "55% 40%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker">Contact Us</p>
 <h1 id="page-title" tabIndex={-1}>Contact King Health</h1>{" "}<p className="band-lede">We would be glad to hear from you, whether you have a specific question or would simply like to begin a conversation about protecting the people you love.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section tint consult after-band" id="consult" tabIndex={-1} aria-labelledby="consult-title">{" "}<div className="container contact-grid">{" "}<ConsultPanel kicker={<>Request a consultation</>} title={<>Tell us how we can help</>} lede={<>Required fields help us prepare before we call, and everything else is optional.</>} category="" coverage="" />{" "}<aside className="consult-aside" aria-label="Direct contact">{" "}<p className="kicker">Speak with us directly</p>{" "}<ul className="directs"><li><span className="k">Phone</span><a href="tel:+19735247188" data-config="phone-link"><span data-config="phone">(973) 524-7188</span></a></li><li><span className="k">Email</span><a href="mailto:Javon@kinghealthdirect.com" data-config="email-link"><span data-config="email">Javon@kinghealthdirect.com</span></a></li><li><span className="k">Hours</span><span>Monday through Friday from half past eight in the morning until six in the evening, and Saturday from half past eight until five. Closed on Sunday.</span></li><li className="directs-areas"><span className="k">Areas</span><ul className="area-list"><li>Newark, NJ</li><li>New Jersey</li><li>North Carolina</li></ul>
 </li></ul>{" "}<div className="aside-links"><Link to="/reviews" className="tlink"><span>Read client reviews</span></Link></div>

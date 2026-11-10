@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { ConsultPanel } from '~/components/ConsultPanel'
 import { Faq } from '~/components/Faq'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from retirement.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -93,7 +94,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/retirement')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: RetirementPage,
 })
 
@@ -104,7 +105,7 @@ function RetirementPage() {
 <nav className="subnav" aria-label="Retirement pages" data-from="retirement"><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/retirement" className="sn-label" aria-current="page">Retirement</Link></li><li><Link to="/annuities">Annuities</Link></li><li><Link to="/indexed-universal-life">Indexed Universal Life</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/advisor-seniors-review.jpg" alt="" width="1800" height="1202" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 28%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/advisor-seniors-review.jpg')} alt="" width="1800" height="1202" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 28%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker">Coverage category</p>
 <h1 id="page-title" tabIndex={-1}>Retirement</h1>{" "}<p className="band-lede">Retirement strategies that bring confidence to the years you have worked toward.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band" aria-labelledby="ov-title">{" "}<div className="container overview reveal">{" "}<div><p className="kicker">Overview</p>
 <h2 className="vh" id="ov-title">Retirement overview</h2>

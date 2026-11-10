@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { ConsultPanel } from '~/components/ConsultPanel'
 import { Faq } from '~/components/Faq'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from indexed-universal-life.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -93,7 +94,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/indexed-universal-life')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: IndexedUniversalLifePage,
 })
 
@@ -104,11 +105,11 @@ function IndexedUniversalLifePage() {
 <nav className="subnav" aria-label="Retirement pages" data-from="retirement"><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/retirement" className="sn-label">Retirement</Link></li><li><Link to="/annuities">Annuities</Link></li><li><Link to="/indexed-universal-life" aria-current="page">Indexed Universal Life</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/family-kitchen-plan.jpg" alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "55% 40%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/family-kitchen-plan.jpg')} alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "55% 40%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker"><Link to="/retirement">Retirement</Link></p>
 <h1 id="page-title" tabIndex={-1}>Indexed Universal Life</h1>{" "}<p className="band-lede">Indexed universal life that combines lasting protection with the potential for growth.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band" aria-labelledby="glance-title">{" "}<div className="container prow">{" "}<div className="prow-body reveal">{" "}<p className="kicker">Indexed Universal Life</p>{" "}<h2 className="h2" id="glance-title">Coverage at a glance</h2>{" "}<div className="copy"><p>Indexed universal life is permanent life insurance that pairs a death benefit with a cash value account. The cash value earns interest credited from the performance of a market index, such as a broad stock index, without being directly invested in the market. A floor protects the cash value from losses when the index declines, while a cap or participation rate limits the amount of interest credited in strong years.</p>
 <p>Premiums are flexible within the limits of the policy, and the cash value grows on a tax deferred basis. It may be accessed through policy loans or withdrawals, which reduce the death benefit and the cash value if they are not repaid. Policy charges continue to apply each year regardless of index performance, and caps, floors, participation rates and riders vary by carrier and by product.</p>
-</div>{" "}</div>{" "}<div className="prow-media reveal"><img src="/media/photos/advisor-client-meeting.jpg" alt="An advisor in a dark suit reviewing paperwork with a client at a bright office desk" width="1800" height="1200" decoding="async" style={{ "objectPosition": "62% 32%" }} /></div>{" "}</div>{" "}</section>{" "}<section className="section tint" aria-labelledby="suits-title">{" "}<div className="container sec-head sec-copy reveal">{" "}<h2 className="h2" id="suits-title">Who it is designed for</h2>{" "}<div className="copy"><p>Indexed universal life is designed for people who want lifelong protection for their families along with the potential to build cash value that may supplement retirement income. It is often considered by established professionals, business owners and families who have already funded their employer retirement plans and would like an additional tax advantaged resource.</p>
+</div>{" "}</div>{" "}<div className="prow-media reveal"><img src={asset('/media/photos/advisor-client-meeting.jpg')} alt="An advisor in a dark suit reviewing paperwork with a client at a bright office desk" width="1800" height="1200" decoding="async" style={{ "objectPosition": "62% 32%" }} /></div>{" "}</div>{" "}</section>{" "}<section className="section tint" aria-labelledby="suits-title">{" "}<div className="container sec-head sec-copy reveal">{" "}<h2 className="h2" id="suits-title">Who it is designed for</h2>{" "}<div className="copy"><p>Indexed universal life is designed for people who want lifelong protection for their families along with the potential to build cash value that may supplement retirement income. It is often considered by established professionals, business owners and families who have already funded their employer retirement plans and would like an additional tax advantaged resource.</p>
 </div>{" "}</div>{" "}</section>{" "}<section className="section" aria-labelledby="how-title">{" "}<div className="container prow how">{" "}<div className="prow-body reveal"><h2 className="h2" id="how-title">How the plan works</h2>
 <div className="copy"><p>Each premium you pay, after policy charges, is added to the cash value, which you may allocate between a fixed account and index accounts. At the end of each crediting period, interest is credited based on the index performance, never less than the floor and never more than the cap. Over time, this structure is designed to capture a portion of market growth while protecting the account from market losses.</p>
 <p>Because indexed universal life is a long term strategy, careful design and consistent funding are essential to keeping the policy in force as intended. We illustrate how the policy may perform under a range of assumptions, explain every charge and feature clearly and review the policy with you regularly so that it stays aligned with your goals.</p>

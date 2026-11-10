@@ -26,7 +26,14 @@ npm run typecheck
 | `src/components/` | Header and mobile menu, Footer, ThemeDrawer, ConsultPanel (the consultation form), Faq, GoogleBadge, NotFoundPage. |
 | `src/lib/config.ts` | Phone, email, the GoHighLevel webhook URL, the optional GoHighLevel form embed, navigation and coverage lists. |
 | `src/lib/enhance.ts` | Scroll reveals, the home hero slideshow, the reviews carousel and the carrier logo strip. |
-| `public/` | Photography, logos, the reviews feed, the contact card, robots and sitemap. |
+| `public/` | Photography, logos, the reviews feed, the contact card, robots and sitemap (loaded through the CDN, see below). |
+| `src/lib/assets.ts` | The one setting for where photos and files load from. |
+
+## Photos and other files
+
+Photos, logos, favicons, the reviews feed and the contact card live in `public/`, and the site loads them from jsDelivr, a free CDN that serves this public repository's files. That is deliberate: website builders that import this code, GoHighLevel included, bring over the React source but not the files in `public/`, so ordinary paths like `/media/hero.jpg` would show nothing there. The CDN address works wherever the code runs.
+
+The address is set once in `src/lib/assets.ts` and pinned to one commit, so the files behind it never change. After adding or replacing a photo in `public/`, push it, then set `ASSET_COMMIT` to that new commit. To serve the files from the same host instead (Cloudflare Pages, for example), build with `VITE_ASSET_BASE` set to an empty string. This repository must stay public for the CDN address to work.
 
 ## GoHighLevel connection
 

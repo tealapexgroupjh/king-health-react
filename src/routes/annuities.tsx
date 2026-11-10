@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { ConsultPanel } from '~/components/ConsultPanel'
 import { Faq } from '~/components/Faq'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from annuities.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -93,7 +94,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/annuities')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: AnnuitiesPage,
 })
 
@@ -104,11 +105,11 @@ function AnnuitiesPage() {
 <nav className="subnav" aria-label="Retirement pages" data-from="retirement"><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/retirement" className="sn-label">Retirement</Link></li><li><Link to="/annuities" aria-current="page">Annuities</Link></li><li><Link to="/indexed-universal-life">Indexed Universal Life</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/senior-signing.jpg" alt="" width="1800" height="1202" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 0%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/senior-signing.jpg')} alt="" width="1800" height="1202" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 0%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker"><Link to="/retirement">Retirement</Link></p>
 <h1 id="page-title" tabIndex={-1}>Annuities</h1>{" "}<p className="band-lede">Annuities that turn your savings into dependable retirement income.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band" aria-labelledby="glance-title">{" "}<div className="container prow">{" "}<div className="prow-body reveal">{" "}<p className="kicker">Annuities</p>{" "}<h2 className="h2" id="glance-title">Coverage at a glance</h2>{" "}<div className="copy"><p>An annuity is a contract with an insurance company in which you make a lump sum payment or a series of payments, and the company agrees to credit interest and, when you choose, to provide income. Fixed annuities credit a declared interest rate for a set period. Fixed indexed annuities credit interest based in part on the performance of a market index, subject to a cap or participation rate, while protecting your principal from index declines. Income annuities convert a sum of money into a stream of payments that may begin right away or at a future date and may last for life.</p>
 <p>Earnings within an annuity grow tax deferred until withdrawn. Annuities are long term products, and most include a surrender period during which withdrawals above a certain amount incur charges; withdrawals may also be subject to income tax and, depending on your age, a federal tax penalty. Annuities are not bank deposits and are not insured by the FDIC, and their guarantees are backed by the claims paying ability of the issuing insurer.</p>
-</div>{" "}</div>{" "}<div className="prow-media reveal"><img src="/media/photos/advisor-lounge-meeting.jpg" alt="Clients meeting with an advisor in a calm, bright lounge" width="1800" height="1202" decoding="async" style={{ "objectPosition": "55% 40%" }} /></div>{" "}</div>{" "}</section>{" "}<section className="section tint" aria-labelledby="suits-title">{" "}<div className="container sec-head sec-copy reveal">{" "}<h2 className="h2" id="suits-title">Who it is designed for</h2>{" "}<div className="copy"><p>Annuities are designed for people approaching or enjoying retirement who would like to protect a portion of their savings from market declines, create a dependable income stream to cover essential expenses, or accumulate savings on a tax deferred basis beyond what employer plans and individual retirement accounts allow.</p>
+</div>{" "}</div>{" "}<div className="prow-media reveal"><img src={asset('/media/photos/advisor-lounge-meeting.jpg')} alt="Clients meeting with an advisor in a calm, bright lounge" width="1800" height="1202" decoding="async" style={{ "objectPosition": "55% 40%" }} /></div>{" "}</div>{" "}</section>{" "}<section className="section tint" aria-labelledby="suits-title">{" "}<div className="container sec-head sec-copy reveal">{" "}<h2 className="h2" id="suits-title">Who it is designed for</h2>{" "}<div className="copy"><p>Annuities are designed for people approaching or enjoying retirement who would like to protect a portion of their savings from market declines, create a dependable income stream to cover essential expenses, or accumulate savings on a tax deferred basis beyond what employer plans and individual retirement accounts allow.</p>
 </div>{" "}</div>{" "}</section>{" "}<section className="section" aria-labelledby="how-title">{" "}<div className="container prow how">{" "}<div className="prow-body reveal"><h2 className="h2" id="how-title">How the plan works</h2>
 <div className="copy"><p>Most annuities have an accumulation phase, during which your money earns interest according to the contract, and an income phase, during which the annuity pays you. Some contracts allow you to add an income rider that provides lifetime withdrawals regardless of the account value, typically for an additional cost.</p>
 <p>We begin by understanding your income needs, your other resources, your time horizon and your comfort with tradeoffs between growth, guarantees and access. We then compare contracts across carriers, explaining crediting methods, surrender schedules, fees and income options in plain language, and recommend a contract only when it suits your goals.</p>

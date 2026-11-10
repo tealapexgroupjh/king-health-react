@@ -1,9 +1,10 @@
 import { Link } from '@tanstack/react-router'
 import { useEffect } from 'react'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from 404.html. Rendered by the root route's notFoundComponent. */
-export const notFoundHead = {
+export const notFoundHead = cdnHead( {
   "meta": [
     {
       "title": "Page Not Found | King Health"
@@ -78,7 +79,7 @@ export const notFoundHead = {
     }
   ],
   "links": []
-}
+})
 
 export function NotFoundPage() {
   usePageEnhancements()
@@ -91,7 +92,7 @@ export function NotFoundPage() {
 <nav className="subnav" aria-label="King Health pages" data-site-nav><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/" className="sn-label">King Health</Link></li><li><Link to="/about">About Us</Link></li><li><Link to="/faq">FAQ</Link></li><li><Link to="/carriers">Carriers</Link></li><li><Link to="/reviews">Client Reviews</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/advisor-lounge-meeting.jpg" alt="" width="1800" height="1202" loading="eager" fetchPriority="high" style={{ "objectPosition": "55% 40%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/advisor-lounge-meeting.jpg')} alt="" width="1800" height="1202" loading="eager" fetchPriority="high" style={{ "objectPosition": "55% 40%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker">Page not found</p>
 <h1 id="page-title" tabIndex={-1}>We could not find that page</h1>{" "}<p className="band-lede">The page you were looking for may have moved, or the address may be mistyped.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band" aria-labelledby="nf-title">{" "}<div className="container prose reveal">{" "}<h2 id="nf-title">Where would you like to go?</h2>{" "}<p>You can return to the home page to explore coverage, or contact us and we will help you directly.</p>{" "}<p><Link to="/" className="btn btn-accent">Return to the home page</Link>{" "}<Link to="/contact" className="tlink"><span>Contact King Health</span></Link></p>{" "}</div>{" "}</section>{" "}</main>
     </>

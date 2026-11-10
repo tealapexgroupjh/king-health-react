@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { ConsultPanel } from '~/components/ConsultPanel'
 import { Faq } from '~/components/Faq'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from term-life.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -93,7 +94,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/term-life')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: TermLifePage,
 })
 
@@ -104,11 +105,11 @@ function TermLifePage() {
 <nav className="subnav" aria-label="Individual Benefits pages" data-from="individual"><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/individual-benefits" className="sn-label">Individual Benefits</Link></li><li><Link to="/individual-health">Individual Health</Link></li><li><Link to="/whole-life">Whole Life</Link></li><li><Link to="/term-life" aria-current="page">Term Life</Link></li><li><Link to="/ancillary" search={{ from: "individual" }}>Ancillary</Link></li><li><Link to="/dental-vision">Dental and Vision</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/parents-baby-dusk.jpg" alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 64%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/parents-baby-dusk.jpg')} alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 64%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker"><Link to="/individual-benefits">Individual Benefits</Link></p>
 <h1 id="page-title" tabIndex={-1}>Term Life</h1>{" "}<p className="band-lede">Term life insurance that protects your family through the years that matter most.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band" aria-labelledby="glance-title">{" "}<div className="container prow">{" "}<div className="prow-body reveal">{" "}<p className="kicker">Term Life</p>{" "}<h2 className="h2" id="glance-title">Coverage at a glance</h2>{" "}<div className="copy"><p>Term life insurance provides a death benefit for a defined period, often chosen to match the years of a mortgage, the years until children are grown or the years remaining until retirement. Premiums generally remain level throughout the term, and because the coverage is temporary, term life typically offers the most protection for the lowest premium.</p>
 <p>Many term policies include a conversion option that allows you to exchange some or all of the coverage for a permanent policy without new medical underwriting, within the limits your contract sets. Some policies are also renewable at the end of the term, usually at a higher premium. Features and availability vary by carrier and by state.</p>
-</div>{" "}</div>{" "}<div className="prow-media reveal"><img src="/media/photos/family-outdoor-warm.jpg" alt="Parents embracing their baby outdoors in warm evening light" width="867" height="1300" decoding="async" style={{ "objectPosition": "50% 30%" }} /></div>{" "}</div>{" "}</section>{" "}<section className="section tint" aria-labelledby="suits-title">{" "}<div className="container sec-head sec-copy reveal">{" "}<h2 className="h2" id="suits-title">Who it is designed for</h2>{" "}<div className="copy"><p>Term life insurance is designed for people whose families rely on their income, including young parents, homeowners with a mortgage, couples planning for the future and business owners who want to protect a partner or a loan. It is especially valuable when a household needs a meaningful amount of protection at a premium that fits a growing family budget.</p>
+</div>{" "}</div>{" "}<div className="prow-media reveal"><img src={asset('/media/photos/family-outdoor-warm.jpg')} alt="Parents embracing their baby outdoors in warm evening light" width="867" height="1300" decoding="async" style={{ "objectPosition": "50% 30%" }} /></div>{" "}</div>{" "}</section>{" "}<section className="section tint" aria-labelledby="suits-title">{" "}<div className="container sec-head sec-copy reveal">{" "}<h2 className="h2" id="suits-title">Who it is designed for</h2>{" "}<div className="copy"><p>Term life insurance is designed for people whose families rely on their income, including young parents, homeowners with a mortgage, couples planning for the future and business owners who want to protect a partner or a loan. It is especially valuable when a household needs a meaningful amount of protection at a premium that fits a growing family budget.</p>
 </div>{" "}</div>{" "}</section>{" "}<section className="section" aria-labelledby="how-title">{" "}<div className="container prow how">{" "}<div className="prow-body reveal"><h2 className="h2" id="how-title">How the plan works</h2>
 <div className="copy"><p>You select a coverage amount and a term length that reflect your family's needs, and you pay a level premium for the duration of the term. If you pass away while the policy is in force, your beneficiaries receive the death benefit, generally free of income tax, to replace your income, pay off debts or fund future goals.</p>
 <p>We help you determine an appropriate amount of coverage by considering your income, your debts and the goals you hold for your family. We then compare carriers whose underwriting suits your health profile, guide you through the application and remind you of conversion opportunities as the end of your term approaches.</p>

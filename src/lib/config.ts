@@ -1,3 +1,5 @@
+import { asset } from './assets'
+
 /* King Health site configuration. The single place to change contact details and the GoHighLevel connection. */
 
 export const KH_CONFIG = {
@@ -8,7 +10,7 @@ export const KH_CONFIG = {
      panel shows the GoHighLevel form instead of the native one, with the page preset appended as
      ?category=&coverage= so the form opens with the same selections. See GHL_FORM_SETUP.md. */
   ghlFormEmbedSrc: '',
-  reviewsJson: '/assets/reviews.json',
+  reviewsJson: asset('/assets/reviews.json'),
   phone: '(973) 524-7188',
   email: 'Javon@kinghealthdirect.com',
 } as const

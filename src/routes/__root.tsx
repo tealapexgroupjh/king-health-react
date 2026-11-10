@@ -7,6 +7,7 @@ import { Header, MenuPanel } from '~/components/Header'
 import { IconSprites } from '~/components/IconSprites'
 import { NotFoundPage } from '~/components/NotFoundPage'
 import { ThemeDrawer } from '~/components/ThemeDrawer'
+import { asset } from '~/lib/assets'
 import { THEME_BOOT_SCRIPT, ThemeProvider, useTheme } from '~/lib/theme'
 import siteCss from '~/styles/site.css?url'
 
@@ -14,9 +15,9 @@ export const Route = createRootRoute({
   head: () => ({
     meta: [{ charSet: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
     links: [
-      { rel: 'icon', href: '/brand/favicon.ico', sizes: 'any' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/brand/favicon-32.png' },
-      { rel: 'apple-touch-icon', href: '/brand/favicon-180.png' },
+      { rel: 'icon', href: asset('/brand/favicon.ico'), sizes: 'any' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: asset('/brand/favicon-32.png') },
+      { rel: 'apple-touch-icon', href: asset('/brand/favicon-180.png') },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap' },

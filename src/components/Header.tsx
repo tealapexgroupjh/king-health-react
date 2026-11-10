@@ -4,6 +4,7 @@ import { trapTab } from '~/lib/a11y'
 import { categoryFor, DARK_THEMES, KH_CONFIG, NAV, PHONE_HREF, type CatKey, type NavCategory } from '~/lib/config'
 import { themeLabel, useTheme } from '~/lib/theme'
 import { useHydrated } from '~/lib/useHydrated'
+import { asset } from '~/lib/assets'
 
 function useCurrentCategory(): CatKey | null {
   const loc = useRouterState({ select: (s) => s.location })
@@ -17,8 +18,8 @@ function BrandLock() {
   const dark = DARK_THEMES.includes(theme)
   return (
     <Link to="/" className="brand-lock">
-      <img className="logo logo-light" src="/brand/king-health-wordmark.png" alt={dark ? '' : 'King Health, home'} width="945" height="557" />
-      <img className="logo logo-dark" src="/brand/king-health-wordmark-reverse.png" alt={dark ? 'King Health, home' : ''} width="945" height="557" />
+      <img className="logo logo-light" src={asset('/brand/king-health-wordmark.png')} alt={dark ? '' : 'King Health, home'} width="945" height="557" />
+      <img className="logo logo-dark" src={asset('/brand/king-health-wordmark-reverse.png')} alt={dark ? 'King Health, home' : ''} width="945" height="557" />
       <span className="kh-leaves" aria-hidden="true">
         <i />
         <i />

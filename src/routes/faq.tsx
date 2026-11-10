@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { ConsultPanel } from '~/components/ConsultPanel'
 import { Faq } from '~/components/Faq'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from faq.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -93,7 +94,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/faq')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: FaqPage,
 })
 
@@ -104,7 +105,7 @@ function FaqPage() {
 <nav className="subnav" aria-label="King Health pages" data-site-nav><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/" className="sn-label">King Health</Link></li><li><Link to="/about">About Us</Link></li><li><Link to="/faq" aria-current="page">FAQ</Link></li><li><Link to="/carriers">Carriers</Link></li><li><Link to="/reviews">Client Reviews</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/advisor-client-meeting.jpg" alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "62% 32%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/advisor-client-meeting.jpg')} alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "62% 32%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker">Questions and answers</p>
 <h1 id="page-title" tabIndex={-1}>Frequently Asked Questions</h1>{" "}<p className="band-lede">Clear answers to the questions families, retirees and employers ask us most, gathered in one place and organized by the coverage you are exploring.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band faqp" aria-label="Frequently Asked Questions">{" "}<div className="container faqp-wrap">{" "}<nav className="legal-toc faqp-toc reveal" aria-label="Browse by topic">{" "}<p className="kicker">Browse by topic</p>{" "}<ol><li><a href="#faq-general">Working with King Health</a></li><li><a href="#faq-about">About King Health</a></li><li><a href="#faq-senior-benefits">Senior Benefits</a></li><li><a href="#faq-individual-benefits">Individual Benefits</a></li><li><a href="#faq-group-benefits">Group Benefits</a></li><li><a href="#faq-retirement">Retirement</a></li><li><a href="#faq-carriers">Carriers</a></li></ol>{" "}</nav>{" "}<div className="faqp-body reveal"><section className="faqp-group" id="faq-general" aria-labelledby="faq-general-h"><div className="faqp-head"><h2 id="faq-general-h">Working with King Health</h2>
 </div>

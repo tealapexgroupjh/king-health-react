@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { usePageEnhancements } from '~/lib/usePageEnhancements'
+import { asset, cdnHead } from '~/lib/assets'
 
 /* Converted from privacy.html (King Health, Summit). Page copy and markup are unchanged. */
 const head = {
@@ -91,7 +92,7 @@ const head = {
 }
 
 export const Route = createFileRoute('/privacy')({
-  head: () => head,
+  head: () => cdnHead(head),
   component: PrivacyPage,
 })
 
@@ -102,7 +103,7 @@ function PrivacyPage() {
 <nav className="subnav" aria-label="King Health pages" data-site-nav><div className="container sn"><ul className="sn-list"><li className="sn-label-item"><Link to="/" className="sn-label">King Health</Link></li><li><Link to="/about">About Us</Link></li><li><Link to="/faq">FAQ</Link></li><li><Link to="/carriers">Carriers</Link></li><li><Link to="/reviews">Client Reviews</Link></li></ul>
 </div>
 </nav>{" "}
-<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src="/media/photos/family-lawn-walk.jpg" alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 46%" }} /></div>
+<main id="main" tabIndex={-1}>{" "}<section className="banner" aria-labelledby="page-title">{" "}<div className="hero-media hero-wide"><div className="hero-photo"><img src={asset('/media/photos/family-lawn-walk.jpg')} alt="" width="1800" height="1200" loading="eager" fetchPriority="high" style={{ "objectPosition": "50% 46%" }} /></div>
 </div>{" "}<div className="container">{" "}<div className="hero-band band">{" "}<p className="kicker">Legal</p>
 <h1 id="page-title" tabIndex={-1}>Privacy Policy</h1>{" "}<p className="band-lede">How King Health LLC collects, uses, discloses and safeguards your information, including information related to SMS communications.</p>{" "}</div>{" "}</div>{" "}</section>{" "}<section className="section after-band legal" aria-label="Privacy Policy">{" "}<div className="container legal-wrap">{" "}<nav className="legal-toc reveal" aria-label="On this page">{" "}<p className="kicker">On this page</p>{" "}<ol><li><a href="#sec-collect">Information We Collect</a></li><li><a href="#sec-use">How We Use Your Information</a></li><li><a href="#sec-sms">SMS Communications and Consent</a></li><li><a href="#sec-sharing">Sharing of Information</a></li><li><a href="#sec-security">Data Security</a></li><li><a href="#sec-cookies">Cookies and Tracking Technologies</a></li><li><a href="#sec-rights">Your Rights and Choices</a></li><li><a href="#sec-children">Children's Privacy</a></li><li><a href="#sec-contact">Contact Us</a></li></ol>{" "}</nav>{" "}<article className="legal-doc reveal">{" "}<header className="legal-meta">{" "}<p className="legal-entity">King Health LLC</p>{" "}<p className="legal-title">Privacy Policy</p>{" "}<dl><div><dt>Effective</dt><dd className="terms-eff"><span data-lint-exempt="date">October 25, 2026</span></dd></div>
 <div><dt>Applies to</dt><dd>kinghealthdirect.com and King Health services</dd></div>
